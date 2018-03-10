@@ -11,6 +11,14 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('bts', function () {
     return view('welcome');
+});
+
+Route::get('/', function () {
+    return view('master-front');
+});
+
+Route::get('dashboard', function () {
+    return view('master-back');
 });
