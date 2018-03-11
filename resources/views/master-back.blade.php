@@ -48,19 +48,19 @@
                     </li>
                     <li class="{{ Request::is('jabar') ? 'active' : '' }}">
                         <a href="{{url('back-post')}}">
-                            <i class="material-icons">location_on</i>
+                            <i class="material-icons">create</i>
                             <p>POST</p>
                         </a>
                     </li>
                     <li class="{{ Request::is('jabodetabek1') ? 'active' : '' }}">
                         <a href="{{url('back-portfolio')}}">
-                            <i class="material-icons">location_on</i>
+                            <i class="material-icons">insert_photo</i>
                             <p>PORTFOLIO</p>
                         </a>
                     </li>
                     <li class="{{ Request::is('jabodetabek2') ? 'active' : '' }}">
                         <a href="{{url('back-settings')}}">
-                            <i class="material-icons">location_on</i>
+                            <i class="material-icons">settings</i>
                             <p>SETTINGS</p>
                         </a>
                     </li>

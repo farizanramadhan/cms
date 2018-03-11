@@ -11,14 +11,19 @@
 |
 */
 
-Route::get('bts', function () {
+// extra routes
+Route::get('copyright', function () {
     return view('welcome');
 });
 
+// front routes
 Route::get('/', function () {
     return view('master-front');
 });
 
+// back routes
 Route::get('dashboard', function () {
     return view('master-back');
 });
+
+Route::resource('posts','PostController');
