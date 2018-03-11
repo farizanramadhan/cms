@@ -24,7 +24,8 @@
     <!-- Material Dashboard DEMO methods, don't include it in your project! -->
     <script src="{{asset('js/demo.js')}}"></script>
     <!--  Charts Plugin -->
-    <script src="{{asset('js/chartist.min.js')}}"></script>
+    <!-- temporary disabled -->
+    <!-- <script src="{{asset('js/chartist.min.js')}}"></script> -->
 </head>
 
 <body>
@@ -36,7 +37,8 @@
         Tip 2: you can also add an image using data-image tag
     -->
             <div class="logo">
-                <center><img src="{{asset('img/logo.png')}}" alt="" width="150px"></center>
+              <!-- temporary disabled -->
+                <!-- <center><img src="{{asset('img/logo.png')}}" alt="" width="150px"></center> -->
             </div>
             <div class="sidebar-wrapper">
                 <ul class="nav">
@@ -125,13 +127,14 @@
 <!-- Material Dashboard javascript methods -->
 <script src="{{asset('js/material-dashboard.js?v=1.2.0')}}"></script>
 
-<script type="text/javascript">
+<!-- temporary disabled -->
+<!-- <script type="text/javascript">
     $(document).ready(function() {
 
         // Javascript method's body can be found in assets/js/demos.js
         demo.initDashboardPageCharts();
 
     });
-</script>
+</script> -->
 
 </html>

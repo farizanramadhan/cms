@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Post;
 
 class PostController extends Controller
 {
@@ -13,7 +14,7 @@ class PostController extends Controller
      */
     public function index()
     {
-      //$posts=Post::all();
+      $posts=Post::all();
       return view('back-posts',compact('posts'));
     }
 
@@ -35,17 +36,18 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-      if($request->hasfile('filename'))
-       {
-          $file = $request->file('filename');
-          $name=time().$file->getClientOriginalName();
-          $file->move(public_path().'/images/', $name);
-       }
+      // temporary disabled
+      // if($request->hasfile('filename'))
+      //  {
+      //     $file = $request->file('filename');
+      //     $name=time().$file->getClientOriginalName();
+      //     $file->move(public_path().'/images/', $name);
+      //  }
       $post= new Post();
       $post->title=$request->get('title');
       $post->content=$request->get('content');
-      $post->thumbnail=$name;
-      $passport->save();
+      // $post->thumbnail=$name;
+      $post->save();
 
       return redirect('posts')->with('success', 'Post has been added');
     }

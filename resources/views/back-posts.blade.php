@@ -38,6 +38,17 @@
                   <th class="font-weight-bold text-uppercase">Actions</th>
           			</thead>
           			<tbody>
+                  @foreach($posts as $post)
+                  <tr>
+                    <td>{{$post['title']}}</td>
+                    <td>{{strip_tags($post['content'])}}</td>
+                    <td>{{$post['created_at']}}</td>
+                    <td>
+                      <button class="btn btn-warning btn-sm"><i class="material-icons">mode_edit</i></button>
+                      <button class="btn btn-danger btn-sm"><i class="material-icons">delete</i></button>
+                    </td>
+                  </tr>
+                  @endforeach
           				<tr>
           					<td>Dakota Rice</td>
           					<td>Niger</td>
@@ -111,15 +122,16 @@
           <span aria-hidden="true"><i class="material-icons">clear</i></span>
         </button> -->
       </div>
+      <form method="post" action="{{url('posts')}}" enctype="multipart/form-data">
+        @csrf
       <div class="modal-body">
-
         <div class="row">
           <div class="col-lg-12">
             <div class="input-group-lg">
               <input type="text" class="form-control" placeholder="Title" name="title" required>
             </div>
             <div class="form-group is-empty is-fileinput">
-                <input type="file" id="inputFile4">
+                <input type="file" id="file" name="thumbnail">
                 <div class="input-group">
                   <input type="text" readonly="" class="form-control" placeholder="Post's Thumbnail">
                     <span class="input-group-btn input-group-sm">
@@ -134,13 +146,13 @@
             </div>
           </div>
         </div>
-
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         <button type="button" class="btn btn-warning" data-dismiss="modal">Save as Draft</button>
         <button type="submit" class="btn btn-success">Publish</button>
       </div>
+    </form>
     </div>
   </div>
 </div>
