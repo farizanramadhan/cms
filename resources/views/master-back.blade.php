@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <link rel="apple-touch-icon" sizes="76x76" href="{{asset('img/faviconccb.png')}}" />
     <link rel="apple-touch-icon" sizes="76x76" href="{{asset('img/faviconccb.png')}}" />
-    <link rel="shortcut icon" href="{{asset('img/faviconccb.png')}}">
+    <link rel="shortcut icon" href="{{asset('img/cms.png')}}">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>CMS Dashboard</title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -46,19 +46,19 @@
                             <p>DASHBOARD</p>
                         </a>
                     </li>
-                    <li class="{{ Request::is('jabar') ? 'active' : '' }}">
+                    <li class="{{ Request::is('posts') ? 'active' : '' }}">
                         <a href="{{url('back-post')}}">
                             <i class="material-icons">create</i>
-                            <p>POST</p>
+                            <p>POSTS</p>
                         </a>
                     </li>
-                    <li class="{{ Request::is('jabodetabek1') ? 'active' : '' }}">
+                    <li class="{{ Request::is('portfolios') ? 'active' : '' }}">
                         <a href="{{url('back-portfolio')}}">
                             <i class="material-icons">insert_photo</i>
-                            <p>PORTFOLIO</p>
+                            <p>PORTFOLIOS</p>
                         </a>
                     </li>
-                    <li class="{{ Request::is('jabodetabek2') ? 'active' : '' }}">
+                    <li class="{{ Request::is('settings') ? 'active' : '' }}">
                         <a href="{{url('back-settings')}}">
                             <i class="material-icons">settings</i>
                             <p>SETTINGS</p>
