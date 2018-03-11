@@ -44,65 +44,11 @@
                     <td>{{strip_tags($post['content'])}}</td>
                     <td>{{$post['created_at']}}</td>
                     <td>
-                      <button class="btn btn-warning btn-sm"><i class="material-icons">mode_edit</i></button>
-                      <button class="btn btn-danger btn-sm"><i class="material-icons">delete</i></button>
+                      <a class="btn btn-warning btn-sm" href="{{action('PostController@edit', $post['id'])}}"><i class="material-icons">mode_edit</i></a>
+                      <a class="btn btn-danger btn-sm" href="{{action('PostController@destroy', $post['id'])}}"><i class="material-icons">delete</i></a>
                     </td>
                   </tr>
                   @endforeach
-          				<tr>
-          					<td>Dakota Rice</td>
-          					<td>Niger</td>
-          					<td>Oud-Turnhout</td>
-                    <td>
-                      <button class="btn btn-warning btn-sm"><i class="material-icons">mode_edit</i></button>
-                      <button class="btn btn-danger btn-sm"><i class="material-icons">delete</i></button>
-                    </td>
-          				</tr>
-          				<tr>
-          					<td>Minerva Hooper</td>
-          					<td>Curaçao</td>
-          					<td>Sinaai-Waas</td>
-                    <td>
-                      <button class="btn btn-warning btn-sm"><i class="material-icons">mode_edit</i></button>
-                      <button class="btn btn-danger btn-sm"><i class="material-icons">delete</i></button>
-                    </td>
-          				</tr>
-          				<tr>
-          					<td>Sage Rodriguez</td>
-          					<td>Netherlands</td>
-          					<td>Baileux</td>
-                    <td>
-                      <button class="btn btn-warning btn-sm"><i class="material-icons">mode_edit</i></button>
-                      <button class="btn btn-danger btn-sm"><i class="material-icons">delete</i></button>
-                    </td>
-          				</tr>
-          				<tr>
-          					<td>Philip Chaney</td>
-          					<td>Korea, South</td>
-          					<td>Overland Park</td>
-                    <td>
-                      <button class="btn btn-warning btn-sm"><i class="material-icons">mode_edit</i></button>
-                      <button class="btn btn-danger btn-sm"><i class="material-icons">delete</i></button>
-                    </td>
-          				</tr>
-          				<tr>
-          					<td>Doris Greene</td>
-          					<td>Malawi</td>
-          					<td>Feldkirchen in Kärnten</td>
-                    <td>
-                      <button class="btn btn-warning btn-sm"><i class="material-icons">mode_edit</i></button>
-                      <button class="btn btn-danger btn-sm"><i class="material-icons">delete</i></button>
-                    </td>
-          				</tr>
-          				<tr>
-          					<td>Mason Porter</td>
-          					<td>Chile</td>
-          					<td>Gloucester</td>
-                    <td>
-                      <button class="btn btn-warning btn-sm"><i class="material-icons">mode_edit</i></button>
-                      <button class="btn btn-danger btn-sm"><i class="material-icons">delete</i></button>
-                    </td>
-          				</tr>
           			</tbody>
           		</table>
           	</div>
