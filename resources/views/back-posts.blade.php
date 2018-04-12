@@ -1,6 +1,6 @@
 @extends('master-back')
 
-@section('page-title', '')
+@section('page-title', 'Post')
 
 @section('main-content')
 
@@ -45,7 +45,11 @@
                     <td>{{$post['created_at']}}</td>
                     <td>
                       <a class="btn btn-warning btn-sm" href="{{action('PostController@edit', $post['id'])}}"><i class="material-icons">mode_edit</i></a>
-                      <a class="btn btn-danger btn-sm" href="{{action('PostController@destroy', $post['id'])}}"><i class="material-icons">delete</i></a>
+                      <form action="{{action('PostController@destroy', $post['id'])}}" method="post">
+                        @csrf
+                        <input name="_method" type="hidden" value="DELETE">
+                        <button class="btn btn-danger btn-sm" type="submit"><i class="material-icons">delete</i></button>
+                      </form>
                     </td>
                   </tr>
                   @endforeach

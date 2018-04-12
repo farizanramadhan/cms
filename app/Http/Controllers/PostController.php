@@ -73,7 +73,7 @@ class PostController extends Controller
     public function edit($id)
     {
       $post = Post::find($id);
-      return view('edit',compact('post','id'));
+      return view('back-post-edit',compact('post','id'));
     }
 
     /**
@@ -95,7 +95,6 @@ class PostController extends Controller
       $post= Post::find($id);
       $post->title=$request->get('title');
       $post->content=$request->get('content');
-      $post->thumbnail=$name;
       $post->save();
       return redirect('posts');
     }

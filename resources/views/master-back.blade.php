@@ -49,19 +49,19 @@
                         </a>
                     </li>
                     <li class="{{ Request::is('posts') ? 'active' : '' }}">
-                        <a href="{{url('back-post')}}">
+                        <a href="{{url('posts')}}">
                             <i class="material-icons">create</i>
                             <p>POSTS</p>
                         </a>
                     </li>
                     <li class="{{ Request::is('portfolios') ? 'active' : '' }}">
-                        <a href="{{url('back-portfolio')}}">
+                        <a href="{{url('portfolios')}}">
                             <i class="material-icons">insert_photo</i>
                             <p>PORTFOLIOS</p>
                         </a>
                     </li>
                     <li class="{{ Request::is('settings') ? 'active' : '' }}">
-                        <a href="{{url('back-settings')}}">
+                        <a href="{{url('settings')}}">
                             <i class="material-icons">settings</i>
                             <p>SETTINGS</p>
                         </a>
