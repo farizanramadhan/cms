@@ -14,14 +14,9 @@
       <div class="card-header" data-background-color="green">
         <div class="nav-tabs-navigation">
           <div class="nav-tabs-wrapper">
-              <span class="nav-tabs-title"><b>ALL POSTS</b></span>
+              <span class="nav-tabs-title"><b>EDIT EXISTING POSTS</b></span>
               <ul class="nav nav-tabs" data-tabs="tabs">
-                <li class="active pull-right">
-                  <a class="btn" data-toggle="modal" data-target="#exampleModal">
-                    <i class="material-icons">add</i>
-                    Add New Post
-                  <div class="ripple-container"></div></a>
-                </li>
+                <!-- tabs -->
               </ul>
           </div>
         </div>

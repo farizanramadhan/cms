@@ -29,33 +29,35 @@
       </div>
       <div class="card-content table-responsive">
         <div class="row">
-          <div class="card-content table-responsive table-full-width">
-          		<table class="table">
-          			<thead class="text-success">
-          				<th class="font-weight-bold text-uppercase">Title</th>
-          				<th class="font-weight-bold text-uppercase">Content</th>
-          				<th class="font-weight-bold text-uppercase">Date</th>
-                  <th class="font-weight-bold text-uppercase">Actions</th>
-          			</thead>
-          			<tbody>
-                  @foreach($posts as $post)
-                  <tr>
-                    <td>{{$post['title']}}</td>
-                    <td>{{strip_tags($post['content'])}}</td>
-                    <td>{{$post['created_at']}}</td>
-                    <td>
-                      <a class="btn btn-warning btn-sm" href="{{action('PostController@edit', $post['id'])}}"><i class="material-icons">mode_edit</i></a>
-                      <form action="{{action('PostController@destroy', $post['id'])}}" method="post">
-                        @csrf
-                        <input name="_method" type="hidden" value="DELETE">
-                        <button class="btn btn-danger btn-sm" type="submit"><i class="material-icons">delete</i></button>
-                      </form>
-                    </td>
-                  </tr>
-                  @endforeach
-          			</tbody>
-          		</table>
-          	</div>
+          <div class="content">
+            <div class="card-content table-responsive table-full-width">
+            		<table class="table">
+            			<thead class="text-success">
+            				<th class="font-weight-bold text-uppercase">Title</th>
+            				<th class="font-weight-bold text-uppercase">Content</th>
+            				<th class="font-weight-bold text-uppercase">Date</th>
+                    <th class="font-weight-bold text-uppercase">Actions</th>
+            			</thead>
+            			<tbody>
+                    @foreach($posts as $post)
+                    <tr>
+                      <td>{{$post['title']}}</td>
+                      <td>{{strip_tags($post['content'])}}</td>
+                      <td>{{$post['created_at']}}</td>
+                      <td>
+                        <a class="btn btn-warning btn-sm" href="{{action('PostController@edit', $post['id'])}}"><i class="material-icons">mode_edit</i></a>
+                        <form action="{{action('PostController@destroy', $post['id'])}}" method="post">
+                          @csrf
+                          <input name="_method" type="hidden" value="DELETE">
+                          <button class="btn btn-danger btn-sm" type="submit"><i class="material-icons">delete</i></button>
+                        </form>
+                      </td>
+                    </tr>
+                    @endforeach
+            			</tbody>
+            		</table>
+            	</div>
+          </div>
         </div>
       </div>
     </div>

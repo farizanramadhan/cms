@@ -23,7 +23,7 @@ Route::get('/', function () {
 
 // back routes
 Route::get('dashboard', function () {
-    return view('master-back');
+    return view('dashboard');
 });
 
 Route::resource('posts','PostController');
